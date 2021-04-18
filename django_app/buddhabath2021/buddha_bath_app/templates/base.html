@@ -1,0 +1,29 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/loader.css' %}">
+  <title>{% block title %}Buddha Bath 2021{% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/smooth-scroll.min.js' %}"></script>
+  <script src="{% static 'js/jquery.parallax-1.1.3.js' %}"></script>
+  <script src="{% static 'js/scrollReveal.min.js' %}"></script>
+  <script src="{% static 'js/functions.js' %}"></script>
+<script src="{% static 'js/canvas.js' %}"></script>
+</html>

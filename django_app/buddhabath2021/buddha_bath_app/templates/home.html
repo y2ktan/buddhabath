@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+ <!-- PRELOADER -->
+		<div id="loader-wrapper">
+			<div id="loader"><div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div></div>
+		</div>
+
+	<!-- HEADER -->
+		<section id="header">
+			<div class="container">
+				<video id="video" muted>
+					<source src="static/video/daaitv_buddha_bath.mp4" type="video/mp4"/>
+				</video>
+				 <canvas></canvas>
+				<div class="row text-center">
+					<div class="col-md-8">
+						<!-- <img class="logo" src="images/logo.png" />
+						<h1 class="white-text">Welcome Template Stock</h1>
+						<h5 class="white-text">Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt.</h5> -->
+
+						<!-- <div id="countdown" class="white-text"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="animation">
+			<a class="arrow-down-animation" data-scroll href="#about"><i class="fa fa-angle-down"></i></a>
+			</div>
+		</section>
+	<!-- HEADER ENDS -->
+
+	<!-- ABOUT -->
+		<section id="about">
+			<div class="container">
+				<div class="row text-center">
+					<!-- Section 1 -->
+					<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
+						<i class="fa fa-book"></i>
+						<h2>
+							啟發大愛&nbsp;厚植善根
+						</h2>
+						<h3>禮拜法華經廿八法品</h3>
+						<div class="colored-line-small-center"></div>
+						<p>4月17日&nbsp;-&nbsp;5月3日</p>
+						<p>1930&nbsp;-&nbsp;2130</p>
+						<p>感恩堂/各分支連點</p>
+					</div>
+					<!-- Section 2 -->
+					<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col-md-4 middle">
+						<i class="fa fa-leaf"></i>
+						<h2>
+							上人壽辰&nbsp;藥師法會
+						</h2>
+						<h3>全球藥師經共修</h3>
+						<div class="colored-line-small-center"></div>
+						<p>&nbsp;&nbsp;5月5日&nbsp;（三）&nbsp;</p>
+						<p>0340&nbsp;-&nbsp;0820</p>
+						<p>0930&nbsp;-&nbsp;1255 </p>
+					    <p>1900&nbsp;-&nbsp;2150 </p>
+						<p>感恩堂/各分支连点</p>
+					</div>
+					<!-- Section 3 -->
+					<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-4">
+						<i class="fa fa-skyatlas"></i>
+						<h2>
+							萬人連線&nbsp;普天同慶
+						</h2>
+						<h3>佛誕節&nbsp;母親節&nbsp;慈濟日</h3>
+						<div class="colored-line-small-center"></div>
+						<p>5月9日&nbsp;（日）&nbsp;</p>
+						<p>大德:&nbsp;同步連線&nbsp;虛空法界</p>
+						<p>志工:&nbsp;組長帶動&nbsp;小組浴佛</p>
+					    <p>職志:&nbsp;靜思堂&nbsp;&nbsp;&nbsp;虔誠祈禱</p>
+					</div>
+				</div>
+			</div>
+			<a class="arrow-down-animation" data-scroll href="#contact">
+				<span style='font-family: "標楷體字型", "DFKai-sb", Tahoma , Verdana , Arial , sans-serif;'>點擊下方參與</span>
+				<BR><i class="fa fa-angle-down"></i>
+			</a>
+		</section>
+	<!-- ABOUT ENDS -->
+
+	<!-- SUBSCRIBE -->
+		<!-- <section id="subscribe">
+			<div class="container">
+				<i data-sr="ease-in over 1s, reset" class="fa fa-envelope icontop"></i>
+				<div class="row text-center">
+					<div class="col-md-8 col-md-offset-2">
+						<h2 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="white-text">Sign up to our Newsletter</h2>
+						<h5 data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="white-text">Stay up2date with climb-up</h5>
+
+						<form id="mc_form" role="form">
+							<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="email" class="form-control" id="mc-email" name="mc-email" placeholder="Your Email" />
+							<button data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb">Submit</button>
+							<label for="mc-email" class="mc-email"></label>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</section> -->
+	<!-- SUBSCRIBE ENDS -->
+
+	<!-- CONTACT US -->
+		<section id="contact">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8 col-md-offset-2">
+						<!-- CONTACT FORM -->
+						<form method="post" id="contact_form" action="">
+							{% csrf_token %}
+							<p data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center">我想參與</p>
+							<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+								<input type="text" class="form-control" id="name" name="name" placeholder="姓名" />
+							</div>
+							<div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+								<input type="email" class="form-control" id="email" name="email" placeholder="電郵" />
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="聯絡號碼" />
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="寫下您的評論"></textarea>
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-sm-12 ">
+								<button type="submit" class="button-leweb">提交</button>
+							</div>
+						</form>
+
+						<!-- AFTER SENDING MESSAGE -->
+						<div id="success" class="col-md-12 col-sm-12 text-center">
+							<i class="fa fa-check-circle"></i>
+							<strong>提交成功</strong>
+							<p>感恩您的參與</p>
+						</div>
+						<!-- CONTACT FORM ENDS -->
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- CONTACT ENDS -->
+
+	<!-- FOOTER -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row text-center">
+					<p>
+						&copy; 2009-2016 Buddhist Tzu-Chi Merits Society Malaysia. All rights reserved.
+						<span class="social">
+							<a href="#"><i class="fa fa-facebook-square"></i></a>
+							<a href="#"><i class="fa fa-twitter-square"></i></a>
+							<a href="#"><i class="fa fa-google-plus-square"></i></a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</footer>
+	<!-- FOOTER ENDS -->
+{% endblock %}
